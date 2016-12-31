@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AgentFire.Wpf.ValueConverters</RootNamespace>
-    <AssemblyName>Value Converters</AssemblyName>
+    <AssemblyName>AgentFire.Wpf.ValueConverters</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CastTo.cs" />
     <Compile Include="ParameterizedValueConverterBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueConverterBase.cs" />

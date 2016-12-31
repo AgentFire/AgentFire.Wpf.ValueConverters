@@ -4,6 +4,11 @@ using System.Windows.Data;
 
 namespace AgentFire.Wpf.ValueConverters
 {
+    /// <summary>
+    /// Represents an abstract class that is used for WPF Value conversions from <typeparamref name="TSource"/> to <typeparamref name="TTarget"/> using a parameter of type <typeparamref name="TParameter"/>.
+    /// </summary>
+    /// <typeparam name="TSource">The type to convert from.</typeparam>
+    /// <typeparam name="TTarget">The type to convert to.</typeparam>
     public abstract class ParameterizedValueConverterBase<TSource, TTarget, TParameter> : ValueConverterBase<TSource, TTarget>, IValueConverter
     {
         protected override TTarget Convert(TSource source) => Convert(source, default(TParameter));
@@ -17,43 +22,11 @@ namespace AgentFire.Wpf.ValueConverters
 
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            TParameter p = ConvertParameter(parameter);
-
-            if (Equals(value, default(TSource)))
-            {
-                return Convert(default(TSource), p);
-            }
-            else if (value is TSource)
-            {
-                return Convert((TSource)value, p);
-            }
-
-            return default(TTarget);
+            return Convert(CastTo<TSource>.From(value), CastTo<TParameter>.From(value));
         }
         object IValueConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            TParameter p = ConvertParameter(parameter);
-
-            if (Equals(value, default(TTarget)))
-            {
-                return ConvertBack(default(TTarget), p);
-            }
-            else if (value is TTarget)
-            {
-                return ConvertBack((TTarget)value, p);
-            }
-
-            return default(TSource);
-        }
-
-        private static TParameter ConvertParameter(object parameter)
-        {
-            if (parameter != null && parameter is TParameter)
-            {
-                return (TParameter)parameter;
-            }
-
-            return default(TParameter);
+            return ConvertBack(CastTo<TTarget>.From(value), CastTo<TParameter>.From(value));
         }
     }
 }

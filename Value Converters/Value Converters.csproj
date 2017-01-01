@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="BooleanConverterBase.cs" />
     <Compile Include="Predefined\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Predefined\NullToVisibilityConverter.cs" />
     <Compile Include="Tools\CastTo.cs" />
     <Compile Include="ParameterizedValueConverterBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

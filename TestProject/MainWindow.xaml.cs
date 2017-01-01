@@ -26,6 +26,6 @@ namespace TestProject
             DataContext = this;
         }
 
-        public bool TestBoolValue { get; set; } = true;
+        public object TestBoolValue { get; set; } = new object();
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <c:BooleanToVisibilityConverter x:Key="c" IsInverted="False" />
+        <c:NullToVisibilityConverter x:Key="c" IsInverted="True" />
     </Window.Resources>
     <Grid Visibility="{Binding TestBoolValue, Converter={StaticResource c}}">
         <Button Margin="50" />

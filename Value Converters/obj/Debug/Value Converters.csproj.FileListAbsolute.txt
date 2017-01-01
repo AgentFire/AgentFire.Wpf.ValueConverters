@@ -1,5 +1,5 @@
-C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\bin\Debug\Value Converters.dll
-C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\bin\Debug\Value Converters.pdb
 C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\obj\Debug\Value Converters.csprojResolveAssemblyReference.cache
-C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\obj\Debug\Value Converters.dll
-C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\obj\Debug\Value Converters.pdb
+C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\bin\Debug\AgentFire.Wpf.ValueConverters.dll
+C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\bin\Debug\AgentFire.Wpf.ValueConverters.pdb
+C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\obj\Debug\AgentFire.Wpf.ValueConverters.dll
+C:\Users\AgentFire\Dropbox\My NuGet Packages\AgentFire.Wpf.ValueConverters\Value Converters\obj\Debug\AgentFire.Wpf.ValueConverters.pdb

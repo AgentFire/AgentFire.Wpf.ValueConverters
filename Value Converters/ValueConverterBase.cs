@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgentFire.Wpf.ValueConverters.Tools;
+using System;
 using System.Globalization;
 using System.Windows.Data;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace AgentFire.Wpf.ValueConverters
+namespace AgentFire.Wpf.ValueConverters.Tools
 {
     /// <summary>
     /// Class to cast to type <see cref="T"/>

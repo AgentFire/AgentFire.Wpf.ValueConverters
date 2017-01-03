@@ -3,6 +3,21 @@ Ultimate base class for WPF IValueConverter interface along with some useful imp
 
 Usage:
 
+Simple way:
+
+    using AgentFire.Wpf.ValueConverters;
+    using System.Windows;
+    
+    class BooleanToVisibilityConverter : ValueConverterBase<bool, Visibility>
+    {
+        protected override Visibility Convert(bool source)
+        {
+            return source ? Visibility.Visible : Visibility.Collpased;
+        }
+    }
+    
+Advanced way:
+
     using AgentFire.Wpf.ValueConverters;
 
     class Foo

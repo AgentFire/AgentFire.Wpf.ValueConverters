@@ -23,11 +23,11 @@ namespace AgentFire.Wpf.ValueConverters
 
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Convert(CastTo<TSource>.From(value), CastTo<TParameter>.From(value));
+            return Convert(CastTo<TSource>.From(value), CastTo<TParameter>.From(parameter));
         }
         object IValueConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return ConvertBack(CastTo<TTarget>.From(value), CastTo<TParameter>.From(value));
+            return ConvertBack(CastTo<TTarget>.From(value), CastTo<TParameter>.From(parameter));
         }
     }
 }

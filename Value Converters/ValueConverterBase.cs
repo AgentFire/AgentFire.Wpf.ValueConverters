@@ -2,6 +2,7 @@
 using System;
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Markup;
 
 namespace AgentFire.Wpf.ValueConverters
 {
@@ -10,7 +11,7 @@ namespace AgentFire.Wpf.ValueConverters
     /// </summary>
     /// <typeparam name="TSource">The type to convert from.</typeparam>
     /// <typeparam name="TTarget">The type to convert to.</typeparam>
-    public abstract class ValueConverterBase<TSource, TTarget> : IValueConverter
+    public abstract class ValueConverterBase<TSource, TTarget> : MarkupExtension, IValueConverter
     {
         /// <summary>
         /// Override this method to provide custom conversion from <typeparamref name="TSource"/> to <typeparamref name="TTarget"/>.
@@ -35,5 +36,7 @@ namespace AgentFire.Wpf.ValueConverters
         {
             return ConvertBack(CastTo<TTarget>.From(value));
         }
+
+        public override sealed object ProvideValue(IServiceProvider serviceProvider) => this;
     }
 }

@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>AgentFire.Wpf.ValueConverters</id>
-    <version>1.0.0.6</version>
+    <version>1.0.1</version>
     <title>Value Converters</title>
     <authors>AgentFire</authors>
     <owners>AgentFire</owners>
     <projectUrl>https://github.com/AgentFire/AgentFire.Wpf.ValueConverters</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Containts strongly-typed base classes for Value Conversion in WPF (IValueConverter interface - full binding support).</description>
-    <releaseNotes>Fixed parametrized bug.</releaseNotes>
+    <releaseNotes>Inherited from MarkupExtension to allow direct usage from the XAML without declaring a converter in resources.</releaseNotes>
     <copyright>Copyright (c) AgentFire</copyright>
     <tags>wpf binding value converter</tags>
   </metadata>

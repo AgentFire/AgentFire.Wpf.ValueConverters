@@ -30,6 +30,10 @@ namespace AgentFire.Wpf.ValueConverters
 
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value is TSource v)
+            {
+                return Convert(v);
+            }
             return Convert(CastTo<TSource>.From(value));
         }
         object IValueConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

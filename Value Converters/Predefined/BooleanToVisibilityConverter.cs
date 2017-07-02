@@ -12,7 +12,7 @@ namespace AgentFire.Wpf.ValueConverters.Predefined
         /// Default value: <see cref="false"/>. Set to <see cref="true"/> to replace <see cref="Visibility.Collapsed"/> with <see cref="Visibility.Hidden"/>.
         /// </summary>
         public bool UseHidden { get; set; } = false;
-
+        
         protected override Visibility Convert(bool source)
         {
             return ProcessBoolean(source) ? Visibility.Visible : (UseHidden ? Visibility.Hidden : Visibility.Collapsed);

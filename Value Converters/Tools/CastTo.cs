@@ -20,6 +20,13 @@ namespace AgentFire.Wpf.ValueConverters.Tools
         {
             Type type;
 
+            // Null check.
+            if (EqualityComparer<S>.Default.Equals(s, default(S)))
+            {
+                return default(T);
+            }
+
+            // Boxed value check.
             if ((typeof(S).IsInterface || typeof(S) == typeof(object)) && s != null && (type = s.GetType()).IsValueType)
             {
                 if (!Cache<S>.UnboxingCasters.TryGetValue(type, out Func<S, T> caster))

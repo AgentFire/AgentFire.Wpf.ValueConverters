@@ -12,8 +12,8 @@ namespace Quick_Test_Project
     {
         static void Main(string[] args)
         {
-            object o = (double?)123;
-            int v = CastTo<int>.From(o);
+            object o = (int)1234;
+            var v = CastTo<byte>.From(o);
 
             //int r = o as int;
 

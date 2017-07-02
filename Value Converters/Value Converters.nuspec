@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>AgentFire.Wpf.ValueConverters</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Value Converters</title>
     <authors>AgentFire</authors>
     <owners>AgentFire</owners>
     <projectUrl>https://github.com/AgentFire/AgentFire.Wpf.ValueConverters</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Containts strongly-typed base classes for Value Conversion in WPF (IValueConverter interface - full binding support).</description>
-    <releaseNotes>Upgraded type casting with a support for unboxing (e.g. object -> double? -> int).</releaseNotes>
+    <releaseNotes>Added a null check.</releaseNotes>
     <copyright>Copyright (c) AgentFire</copyright>
     <tags>wpf binding value converter</tags>
   </metadata>

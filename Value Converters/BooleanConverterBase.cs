@@ -1,9 +1,9 @@
 ﻿namespace AgentFire.Wpf.ValueConverters
 {
-    public abstract class BooleanConverterBase<T> : ValueConverterBase<bool, T>
+    public abstract class BooleanConverterBase<TSource, TTarget> : ValueConverterBase<TSource, TTarget>
     {
         /// <summary>
-        /// Default value: <see cref="false"/>. Set to <see cref="true"/> if you want the logic to be inverted.
+        /// Default value: <see cref="false"/>. Set to <see cref="true"/> if you want your boolean logic (that is, <see cref="ProcessBoolean(bool)"/> result) to be inverted.
         /// </summary>
         public bool IsInverted { get; set; } = false;
 

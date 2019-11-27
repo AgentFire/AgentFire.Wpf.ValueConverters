@@ -5,6 +5,7 @@ Usage:
 
 Simple way:
 
+```cs
     using AgentFire.Wpf.ValueConverters;
     using System.Windows;
     
@@ -15,6 +16,7 @@ Simple way:
             return source ? Visibility.Visible : Visibility.Collpased;
         }
     }
+```
     
 Advanced way:
 

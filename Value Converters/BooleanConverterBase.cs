@@ -9,7 +9,7 @@
 
         protected bool ProcessBoolean(bool source)
         {
-            return IsInverted ? !source : source;
+            return source ^ IsInverted;
         }
     }
 }

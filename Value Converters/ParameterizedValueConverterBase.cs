@@ -12,8 +12,8 @@ namespace AgentFire.Wpf.ValueConverters
     /// <typeparam name="TTarget">The type to convert to.</typeparam>
     public abstract class ParameterizedValueConverterBase<TSource, TTarget, TParameter> : ValueConverterBase<TSource, TTarget>, IValueConverter
     {
-        protected override TTarget Convert(TSource source) => Convert(source, default(TParameter));
-        protected override TSource ConvertBack(TTarget source) => ConvertBack(source, default(TParameter));
+        protected override TTarget Convert(TSource source) => Convert(source, default);
+        protected override TSource ConvertBack(TTarget source) => ConvertBack(source, default);
 
         protected abstract TTarget Convert(TSource source, TParameter parameter);
         protected virtual TSource ConvertBack(TTarget source, TParameter parameter)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq.Expressions;
 
 namespace AgentFire.Wpf.ValueConverters.Tools
@@ -18,23 +19,36 @@ namespace AgentFire.Wpf.ValueConverters.Tools
         /// <typeparam name="S">Source type to cast from. Usually a generic type.</typeparam>
         public static T From<S>(S s)
         {
-            Type type;
-
-            // Null check.
-            if (EqualityComparer<S>.Default.Equals(s, default(S)))
+            // Default value check.
+            if (EqualityComparer<S>.Default.Equals(s, default))
             {
-                return default(T);
+                return default;
             }
 
             // Boxed value check.
-            if ((typeof(S).IsInterface || typeof(S) == typeof(object)) && s != null && (type = s.GetType()).IsValueType)
+            if ((typeof(S).IsInterface || typeof(S) == typeof(object)) && !(s is null))
             {
-                if (!Cache<S>.UnboxingCasters.TryGetValue(type, out Func<S, T> caster))
-                {
-                    Cache<S>.UnboxingCasters[type] = caster = Cache<S>.GetUnboxing(type);
-                }
+                Type type = s.GetType();
 
-                return caster(s);
+                if (type.IsValueType)
+                {
+                    if (!Cache<S>.UnboxingCasters.TryGetValue(type, out Func<S, T> caster))
+                    {
+                        lock (Cache<S>.UnboxingCasters)
+                        {
+                            if (!Cache<S>.UnboxingCasters.TryGetValue(type, out Func<S, T> casterLocked))
+                            {
+                                Cache<S>.UnboxingCasters[type] = caster = Cache<S>.GetUnboxing(type);
+                            }
+                            else
+                            {
+                                caster = casterLocked;
+                            }
+                        }
+                    }
+
+                    return caster(s);
+                }
             }
 
             return Cache<S>.Caster(s);

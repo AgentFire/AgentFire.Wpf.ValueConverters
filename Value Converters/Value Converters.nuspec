@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>AgentFire.Wpf.ValueConverters</id>
-    <version>1.0.4</version>
+    <id>AgentFire.Wpf.ValueConverters.Core</id>
+    <version>2.0</version>
     <title>Value Converters</title>
     <authors>AgentFire</authors>
     <owners>AgentFire</owners>
     <projectUrl>https://github.com/AgentFire/AgentFire.Wpf.ValueConverters</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Containts strongly-typed base classes for Value Conversion in WPF (IValueConverter interface - full binding support).</description>
-    <releaseNotes>Reworked the BooleanConverterBase.</releaseNotes>
+    <description>Containts strongly-typed base classes for Value Conversion in WPF (IValueConverter interface - full binding support). Also supports direct XAML usage (coz derived from XamlMarkup)</description>
+    <releaseNotes>Core 3.0 now. Also added some race protection.</releaseNotes>
     <copyright>Copyright (c) AgentFire</copyright>
     <tags>wpf binding value converter</tags>
   </metadata>

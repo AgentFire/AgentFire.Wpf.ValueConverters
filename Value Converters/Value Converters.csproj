@@ -6,7 +6,7 @@
     <UseWPF>true</UseWPF>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>3.0</Version>
-    <PackageId>AgentFire.Wpf.ValueConverters</PackageId>
+    <PackageId>AgentFire.Wpf.ValueConverters.Core</PackageId>
     <Authors>AgentFire</Authors>
     <PackageProjectUrl>https://github.com/AgentFire/AgentFire.Wpf.ValueConverters</PackageProjectUrl>
     <RepositoryType>github</RepositoryType>
